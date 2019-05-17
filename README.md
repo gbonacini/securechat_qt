@@ -1,12 +1,16 @@
 Description:
 ============
 
-Securechat is a QT based client/server chat utility  using  ssl/tls (openssl) to establish an encrypted communication between the two parties. This program is a porting of my chat program securechat from ncurses to QT. This program is fully interoperable with its ncurses counterpart.<BR>
+Securechat is a QT based client/server chat utility  using  ssl/tls (openssl) to establish an encrypted communication between the two parties. This program is a porting of my chat program securechat from ncurses to QT. <BR>
+![alt text](images/qtchat1.png "securechat_qt")
+
+This program is fully interoperable with its ncurses counterpart.<BR>
+![alt text](images/qtchat2.png "securechat_qt with securechat")
+
 The ncurses version is also available in my github site.
 
 images qtchat1.png
 
-![alt text](images/qtchat1.png " securechat_qt")
 
 Dependencies:
 -------------
@@ -60,5 +64,4 @@ Client Certificates Configuration:
 
 Request the server.pem certificate to the server counterpart and insert that file in:<BR>
 $HOME/.securechat/TrustStore.pem <BR>
-as explained in the man page.
 
