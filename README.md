@@ -86,7 +86,7 @@ I'm working to an experimental Windows version that is included in the distribut
 It was produced from the Linux/OSX version with minimum changes.<BR>
 It requires QT and Mingw on Windows:<BR>
 
-![alt text](images/windows_ver.png"securechat_qt, Windows version")
+![alt text](images/windows_ver.png "securechat_qt, Windows version")
 
 Dependencies (current testing environment):
 ============================================
