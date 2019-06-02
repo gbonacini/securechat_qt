@@ -96,11 +96,13 @@ Dependencies (current testing environment):
 - Mingw
 
 
-Environment:
-============
+Window Environment:
+==================
 
 After compiling the source code, it's required to add these paths to the PATH variable:<BR>
 
 C:\Qt\5.12.3\mingw73_64\bin;C:\Qt\Tools\mingw730_64\opt\bin;
 
+<BR>The procedure to create openssl certificates is the same, but , the target directory is: <BR>
 
+C:\securechat
