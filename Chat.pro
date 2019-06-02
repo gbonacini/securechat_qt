@@ -59,6 +59,11 @@ defined(OPENSSL_ALT_PATH, var) {
     INCLUDEPATH += /usr/local/ssl/include/
     LIBS +=  -L/usr/local/ssl/lib/
   }
+  win32: {
+    INCLUDEPATH += C:\Qt\Tools\mingw730_64\opt\include
+    QMAKE_CXXFLAGS += -DWINDOWS_OPENSSL
+    LIBS +=  -LC:\Qt\Tools\mingw730_64\opt\lib
+  }
 }
 
 LIBS += -lssl -lcrypto

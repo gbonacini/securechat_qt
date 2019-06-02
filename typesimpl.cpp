@@ -51,7 +51,9 @@ namespace typeutils{
   template size_t          safeSizeT(ssize_t size)             noexcept(false);
   template size_t          safeSizeT(int size)                 noexcept(false);
   template size_t          safeSizeT(uint32_t size)            noexcept(false);
+#ifndef WINDOWS_OPENSSL
   template size_t          safeSizeT(long long int size)       noexcept(false);
+#endif
   template uint32_t        safeUint32(int size)                noexcept(false);
   template uint32_t        safeUint32(unsigned long size)      noexcept(false);
   template unsigned int    safeUInt(size_t size)               noexcept(false);

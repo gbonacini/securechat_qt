@@ -137,6 +137,16 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>lineEditIp1</tabstop>
+  <tabstop>lineEditIp2</tabstop>
+  <tabstop>lineEditIp3</tabstop>
+  <tabstop>lineEditIp4</tabstop>
+  <tabstop>lineEditPort</tabstop>
+  <tabstop>radioServer</tabstop>
+  <tabstop>lineEditPwd</tabstop>
+  <tabstop>lineEditPwdConf</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

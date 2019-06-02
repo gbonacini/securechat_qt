@@ -114,7 +114,9 @@ namespace typeutils{
    extern template ssize_t         safeSsizeT<size_t>(size_t)                 noexcept(false);
    extern template int             safeInt<unsigned int>(unsigned int)        noexcept(false);
    extern template int             safeInt<size_t>(size_t)                    noexcept(false);
-   extern template size_t          safeSizeT<ssize_t>(ssize_t)                noexcept(false);
+   #ifndef WINDOWS_OPENSSL
+      extern template size_t          safeSizeT<ssize_t>(ssize_t)                noexcept(false);
+   #endif
    extern template size_t          safeSizeT<int>(int)                        noexcept(false);
    extern template size_t          safeSizeT<uint32_t>(uint32_t)              noexcept(false);
    extern template size_t          safeSizeT<long long int>(long long int)    noexcept(false);

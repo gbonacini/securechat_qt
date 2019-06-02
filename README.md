@@ -18,6 +18,19 @@ Dependencies:
 - SSL 1.0 (will be upgraded asap) <BR>
 - QT5 <BR>
 
+Tested on:
+----------
+
+- OSX 10.13.6
+- Ubuntu 18 LTS
+
+Tested on:
+----------
+
+- OSX 10.13.6
+- Ubuntu 18.04.2 LTS
+- Windows 10 ((build 17134)
+
 Dependencies intallation (Ubuntu example):
 ------------------------------------------
 
@@ -64,4 +77,30 @@ Client Certificates Configuration:
 
 Request the server.pem certificate to the server counterpart and insert that file in:<BR>
 $HOME/.securechat/TrustStore.pem <BR>
+
+
+Windows Version:
+================
+
+I'm working to an experimental Windows version that is included in the distribution.<BR>
+It was produced from the Linux/OSX version with minimum changes.<BR>
+It requires QT and Mingw on Windows:<BR>
+
+![alt text](images/windows_ver.png"securechat_qt, Windows version")
+
+Dependencies (current testing environment):
+============================================
+
+- Upgraded Windows 10;
+- 5_12_2_
+- Mingw
+
+
+Environment:
+============
+
+After compiling the source code, it's required to add these paths to the PATH variable:<BR>
+
+C:\Qt\5.12.3\mingw73_64\bin;C:\Qt\Tools\mingw730_64\opt\bin;
+
 

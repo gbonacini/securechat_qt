@@ -246,7 +246,11 @@ namespace  sslconn {
                      serverPem,
                      serverKey;
 
-        context.baseDir.append(getenv("HOME")).append("/.securechat/");
+        #ifndef WINDOWS_OPENSSL
+            context.baseDir.append(getenv("HOME")).append("/.securechat/");
+        #else
+            context.baseDir.append("C:\\securechat\\");
+        #endif
 
         if(context.connectionMode == CLIENT){
             context.ctxp = SSL_CTX_new(SSLv23_client_method());

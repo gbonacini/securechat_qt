@@ -105,17 +105,16 @@ MainWindow::MainWindow(QWidget *parent) :
     diagConf  = new DialogConf(this);
     diagHelp  = new DialogHelp(this);
 
-    connect(ui->quitButton, &QPushButton::clicked, this, &MainWindow::quitApp);
-    connect(ui->clearButton, &QPushButton::clicked, this, &MainWindow::clearHistory);
+    connect(ui->quitButton, &QPushButton::clicked,   this, &MainWindow::quitApp);
+    connect(ui->clearButton, &QPushButton::clicked,  this, &MainWindow::clearHistory);
     connect(ui->configButton, &QPushButton::clicked, this, &MainWindow::editConfig);
 
     qRegisterMetaType<std::string>();
 
-    connect(this, SIGNAL(updateMsgSnd(const std::string&)),  this, SLOT(appendMsgSnd(const std::string&)));
-    connect(this, SIGNAL(updateMsgRec(const std::string&, const std::string&)),
-            this, SLOT(appendMsgRec(const std::string&, const std::string&)));
-    connect(this, SIGNAL(updateMsgStat(void)),               this, SLOT(appendMsgStat(void)));
-    connect(this, SIGNAL(updateMsgErr(const std::string&)),  this, SLOT(appendMsgErr(const std::string&)));
+    connect(this, &MainWindow::updateMsgSnd,         this, &MainWindow::appendMsgSnd);
+    connect(this, &MainWindow::updateMsgRec,         this, &MainWindow::appendMsgRec);
+    connect(this, &MainWindow::updateMsgStat,        this, &MainWindow::appendMsgStat);
+    connect(this, &MainWindow::updateMsgErr,         this, &MainWindow::appendMsgErr);
 
     ui->received->setReadOnly(true);
 
@@ -123,16 +122,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->sent->installEventFilter(returnPress);
     connect(returnPress, &ReturnPress::returnKeyPressed, this, &MainWindow::transmit);
 
-    connect(ui->connectButton, &QPushButton::clicked, this, [&](){ if(connectionStatus)
-                                                                      this->disconnectChat();
-                                                                   else
-                                                                      this->connectChat();
+    connect(ui->connectButton, &QPushButton::clicked,    this, [&](){ if(connectionStatus)
+                                                                         this->disconnectChat();
+                                                                      else
+                                                                         this->connectChat();
     });
 
     statusLabel = new QLabel("Disconnected", this);
     statusBar()->addPermanentWidget(statusLabel, 3);
 
-    connect(ui->actionAbout, &QAction::triggered, this, [&](){diagHelp->exec();});
+    connect(ui->actionAbout, &QAction::triggered,        this, [&](){diagHelp->exec();});
 }
 
 sslconn::ChatContext& MainWindow::getCtx(void){
