@@ -106,3 +106,9 @@ C:\Qt\5.12.3\mingw73_64\bin;C:\Qt\Tools\mingw730_64\opt\bin;
 <BR>The procedure to create openssl certificates is the same, but , the target directory is: <BR>
 
 C:\securechat
+
+Sponsors:
+=========
+
+![alt text](images/cppdepend.png "Cppdepend")(https://www.cppdepend.com)
+
