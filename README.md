@@ -110,5 +110,5 @@ C:\securechat
 Sponsors:
 =========
 
-![alt text](images/cppdepend.png "Cppdepend")(https://www.cppdepend.com)
+<a href="https://www.cppdepend.com">![alt text](images/cppdepend.png "Cppdepend")<BR>
 
